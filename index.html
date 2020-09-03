@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+            // Initialize Firebase
+            var config = {
+              apiKey: "AIzaSyBIAxM04eOZl2A3g65mdEFRcDHDwJqE-fY",
+              authDomain: "book-vuejs.firebaseapp.com",
+              databaseURL: "https://book-vuejs.firebaseio.com",
+              projectId: "book-vuejs",
+              storageBucket: "book-vuejs.appspot.com",
+              messagingSenderId: "31721737824"
+            };
+            firebase.initializeApp(config);
+            var db = firebase.firestore();
+          </script>
+    <title>KitapKutusu</title>
+</head>
+<script src="js/register.js"></script>
+<body style='background-color:#333333;'>
+        <div id="cssmenu">
+                <a href="index.html"><img src="images/logo.png" style="width:100px; height:50px;"></a>
+                    <ul>
+                        <li><a href="index.html"><i class="fa fa-fw fa-home"></i> Anasayfa</a></li>
+                        <li><a href="kitaplarim.html"><i class="fa fa-fw fa-bars"></i> Kitaplarım</a></li>
+                        <li><a href="kitapekle.html"><i class="fa fa-fw fa-cog"></i> Kitap Ekle</a></li>
+                        <li><a href="kitap.html"><i class="fas fa-book"></i> En Çok Oy Alan Kitap</a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-phone"></i> İletişim</a></li>
+                        <li><button type="button" class="btn btn-primary">
+                               <i class="fas fa-user-circle"></i>
+                                Oğulcan Daşbaşı <span id="value1" class="badge badge-light">0</span>
+                                <button onclick="logout()" type="button" class="btn btn-danger">Çıkış yap</button>
+                              </button>
+                            </li>
+                    </ul>
+                </div>
+                <div class="wow fadeInDown" id="nameStyle">
+                    <h2>Hoşgeldin <span id="name" style="font-family: 'Montserrat', sans-serif;">Oğulcan</span></h2>
+                </div>
+    <blockquote style="margin-top:90px;" class="blockquote text-center">
+    <p style='color:white;' class="mb-0">Okuma ihtiyacı barut gibidir, bir kere tutuşunca artık sönmez.</p>
+    <footer class="blockquote-footer">Victor Hugo </footer>
+    </blockquote>           
+    <div class="text-center">
+        <img src="images/kitap2.png" class="rounded mx-auto d-block wow  rotateIn" style="width:500px; height:500px; margin-top:50px;">
+      </div>
+    <div class="text-center" style="margin-top:20px;">
+        <h6 style='color:white;'> 
+            <p class="wow fadeInLeft">Amacımız sizin kitaplarınızın tek bir yerde toplanması, online olarak diğer insanların okuduğunuz kitapları görmelerini sağlamak.</p>
+            <p class="wow fadeInRight">İstediğiniz zaman hangi kitabı okumuştum diye düşünmemenizi sağlamak, elinizle koymuş gibi bulmak.</p>
+            <p class="wow fadeInLeft">Ayrıca okuduğunuz kitaplara puan vererek diğer insanlarla kitap hakkında fikirlerinizi rahatça paylaşabileceğiniz bir platform.</p>
+            <p class="wow fadeInRight">Yakında okunan kitapların altına yorum özelliğide gelecek.</p>
+        </h6>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>
+            <div style='color:white;' style="font-family: 'Roboto Condensed', sans-serif;">Ne işe yarar?</div>
+        </h2>
+        <hr width="400" style="border:2px solid" class="rounded">
+        <div class="text-center">
+            <img src="images/kitap.png" class="wow  fadeInLeft" width="300px" height="100px">
+          </div>
+        
+        <br>
+        <br>
+        <br>
+        <p style='color:white;' class="wow fadeInLeft">Hayatınız boyunca okuduğunuz kitapların tek bir yerde toplanmasını ve diğer insanlarla okuduğunuz kitaplar hakkında fikirlerinizi paylaşmanıza yarar.</p>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+            crossorigin="anonymous"></script>
+        <script src="css/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p style='color:white;' id="cop"> Copyright © 2018 Ankara Turkey kitapkutusu.net All rights reserved. </p>
+</body>
+</html>

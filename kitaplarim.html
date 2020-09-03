@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KitapKutusu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/cssload.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyBIAxM04eOZl2A3g65mdEFRcDHDwJqE-fY",
+          authDomain: "book-vuejs.firebaseapp.com",
+          databaseURL: "https://book-vuejs.firebaseio.com",
+          projectId: "book-vuejs",
+          storageBucket: "book-vuejs.appspot.com",
+          messagingSenderId: "31721737824"
+        };
+        firebase.initializeApp(config);
+        var db = firebase.firestore();
+      </script>
+     <script src="js/register.js"></script>
+  <div id="load"></div>   
+  <script src="js/loading.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+   $("#load").fakeLoader({
+
+   timeToHide:1200, //Time in milliseconds for fakeLoader disappear
+
+   zIndex:"999",//Default zIndex
+
+   spinner:"spinner4",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
+
+   bgColor:"#43c5f9", //Hex, RGB or RGBA colors
+});
+    </script>
+    <div id="cssmenu">
+       <a href="index.html"> <img src="images/logo.png" style="width:100px; height:50px;"> </a>
+            <ul>
+                <li><a href="index.html"><i class="fa fa-fw fa-home"></i> Anasayfa</a></li>
+                <li><a href="kitaplarim.html"><i class="fa fa-fw fa-bars"></i> Kitaplarım</a></li>
+                <li><a href="kitapekle.html"><i class="fa fa-fw fa-cog"></i> Kitap Ekle</a></li>
+                <li><a href="kitap.html"><i class="fas fa-book"></i> En Çok Oy Alan Kitap</a></li>
+                <li><a href="#"><i class="fa fa-fw fa-phone"></i> İletişim</a></li>
+                <li><button type="button" class="btn btn-primary">
+                    <i class="fas fa-user-circle"></i>
+                    Oğulcan Daşbaşı <span id="value1" class="badge badge-light">0</span>
+                    <button onclick="logout()" type="button" class="btn btn-danger">Çıkış yap</button>
+                  </button>
+                  <li>
+            </ul>
+        </div>
+        <table class="table table-striped table-dark">
+          <thead>
+           
+          </tbody>
+        </table>
+    <script src="js/retrieve.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+#ex1Slider .slider-selection {
+	background: #BABABA;
+}
+#cssmenu {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: auto;
+}
+#cssmenu ul,
+#cssmenu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu ul {
+  position: relative;
+  z-index: 597;
+}
+#cssmenu ul li {
+  float: left;
+  min-height: 1px;
+  vertical-align: middle;
+}
+#cssmenu ul li.hover,
+#cssmenu ul li:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+#cssmenu ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 598;
+  width: 100%;
+}
+#cssmenu ul ul li {
+  float: none;
+}
+#cssmenu ul ul ul {
+  top: 0;
+  left: 190px;
+  width: 190px;
+}
+#cssmenu ul li:hover > ul {
+  visibility: visible;
+}
+#cssmenu ul ul {
+  bottom: 0;
+  left: 0;
+}
+#cssmenu ul ul {
+  margin-top: 0;
+}
+#cssmenu ul ul li {
+  font-weight: normal;
+}
+#cssmenu a {
+  display: block;
+  line-height: 1em;
+  text-decoration: none;
+}
+/* Custom CSS Styles */
+#cssmenu {
+  background: #333333;
+  border-bottom: 4px solid #1b9bff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  
+}
+#cssmenu > ul {
+  *display: inline-block;
+}
+#cssmenu:after,
+#cssmenu ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#cssmenu ul ul {
+  border-top: 4px solid #1b9bff;
+  text-transform: none;
+  min-width: 190px;
+}
+#cssmenu ul ul a {
+  background: #1b9bff;
+  color: #ffffff;
+  border: 1px solid #0082e7;
+  border-top: 0 none;
+  line-height: 150%;
+  padding: 16px 20px;
+  font-size: 12px;
+}
+#cssmenu ul ul ul {
+  border-top: 0 none;
+}
+#cssmenu ul ul li {
+  position: relative;
+}
+#cssmenu ul ul li:first-child > a {
+  border-top: 1px solid #0082e7;
+}
+#cssmenu ul ul li:hover > a {
+  background: #4eb1ff;
+  color: #ffffff;
+}
+#cssmenu ul ul li:last-child > a {
+  -moz-border-radius: 0 0 3px 3px;
+  -webkit-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -moz-box-shadow: 0 1px 0 #1b9bff;
+  -webkit-box-shadow: 0 1px 0 #1b9bff;
+  box-shadow: 0 1px 0 #1b9bff;
+}
+#cssmenu ul ul li:last-child:hover > a {
+  -moz-border-radius: 0 0 0 3px;
+  -webkit-border-radius: 0 0 0 3px;
+  border-radius: 0 0 0 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+#cssmenu ul ul li.has-sub > a:after {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -8px;
+}
+#cssmenu ul li:hover > a,
+#cssmenu ul li.active > a {
+  background: #1b9bff;
+  color: #ffffff;
+}
+#cssmenu ul li.has-sub > a:after {
+  content: '+';
+  margin-left: 5px;
+}
+#cssmenu ul li.last ul {
+  left: auto;
+  right: 0;
+}
+#cssmenu ul li.last ul ul {
+  left: auto;
+  right: 99.5%;
+}
+#cssmenu a {
+  background: #333333;
+  color: #CBCBCB;
+  padding: 0 20px;
+}
+#cssmenu > ul > li > a {
+  line-height: 48px;
+  font-size: 12px;
+}
+#cop{
+  text-decoration-color: #333333;
+  text-align: center;
+}
+#books{
+  color: #0082e7;
+  font-size: 35px;
+}
+.login-form {
+  width: 450px;
+  height: 300px;
+    margin: 50px auto;
+}
+  .login-form form {
+    margin-bottom: 15px;
+      background: #f7f7f7;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+      padding: 30px;
+  }
+  .login-form h2 {
+      margin: 0 0 15px;
+  }
+  .form-control, .btn {
+      min-height: 38px;
+      border-radius: 2px;
+  }
+  .btn {        
+      font-size: 15px;
+      font-weight: bold;
+  }
+  body{
+    background-color:#FFFFFF;
+    background-size: cover;
+  }
+  .achievement-pane {
+    display: none;
+    width: 465px;
+    height: 55px;
+    margin-left: 650px;
+    left: 60%;
+    position: static;
+  }
+  
+  .icon {
+    width: 55px;
+    height: 55px;
+    top:20px;
+    left: 0px;
+    background: url(https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/121-32.png), linear-gradient(to bottom, rgba(249,194,12,1) 0%,rgba(255,149,11,1) 100%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 12px;
+    border: 2px solid #B04F0B;
+    float: left;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .text {
+    width: 400px;
+    height: 55px;
+    top:10px;
+    left: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;  
+    border-radius: 12px;
+    border: 2px solid #B5B5B5;
+    float: left;
+    margin-left: 10px;
+    box-sizing: border-box;
+    position: relative;
+    padding: 18px 20px 14px 20px;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  
+  .unlocked {
+    font: 1.1em Helvetica;
+    font-weight: 700;
+    color: #494949;
+    position: relative;
+  }
+  
+  .name {
+    width:100%;
+    top: 40px;
+    left: 0;
+    float :left;
+  }
+  
+  .tk {
+    float: right;
+    color: #B5B5B5;
+    font-weight: 200;
+  }
+  #hata{
+    display: none;
+  }
+  #nameStyle{
+    color:white;
+    text-align: center;
+    margin-top:40px;
+  }
+  

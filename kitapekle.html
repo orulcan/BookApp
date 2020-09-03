@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KitapKutusu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.11/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+        var config = {
+            apiKey: "AIzaSyBIAxM04eOZl2A3g65mdEFRcDHDwJqE-fY",
+            authDomain: "book-vuejs.firebaseapp.com",
+            databaseURL: "https://book-vuejs.firebaseio.com",
+            projectId: "book-vuejs",
+            storageBucket: "book-vuejs.appspot.com",
+            messagingSenderId: "31721737824"
+        };
+        firebase.initializeApp(config);
+    </script>
+   <script src="js/register.js"></script>
+</head>
+<body>
+    <div id="cssmenu">
+       <a href="index.html"> <img src="images/logo.png" style="width:100px; height:50px;"> </a>
+            <ul>
+                <li><a href="index.html"><i class="fa fa-fw fa-home"></i> Anasayfa</a></li>
+                <li><a href="kitaplarim.html"><i class="fa fa-fw fa-bars"></i> Kitaplarım</a></li>
+                <li><a href="kitapekle.html"><i class="fa fa-fw fa-cog"></i> Kitap Ekle</a></li>
+                <li><a href="kitap.html"><i class="fas fa-book"></i> En Çok Oy Alan Kitap</a></li>
+                <li><a href="#"><i class="fa fa-fw fa-phone"></i> İletişim</a></li>
+                <li><button type="button" class="btn btn-primary">
+                        <i class="fas fa-user-circle"></i>
+                        Oğulcan Daşbaşı <span id="value1" class="badge badge-light">0</span>
+                        <button onclick="logout()" type="button" class="btn btn-danger">Çıkış yap</button>
+                      </button>
+                      <li>
+            </ul>
+        </div>
+    <div style="margin-left:15px; margin-top:10px;">
+    
+        <div class="form-group">
+            <label for="exampleInputEmail1">Kitap Adı</label>
+            <input type="textbox" class="form-control" id="bookName" placeholder="Kitap Adını Giriniz"  maxlength="90">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Yazar</label>
+            <input type="textbox" class="form-control" id="bookAuthor" placeholder="Yazarı Giriniz" maxlength="90">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Sayfa Sayısı</label>
+            <input type="textbox" class="form-control" id="bookPage" placeholder="Sayfa Sayısı" maxlength="5" >
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Kitap Türü</label>
+            <select class="form-control" id="bookType" >
+                <option>Aksiyon</option>
+                <option>Roman</option>
+                <option>Polisiye</option>
+                <option>Aşk</option>
+                <option>Çocuk Kitapları</option>
+                <option>Din</option>
+                <option>Edebiyat</option>
+                <option>Öykü</option>
+                <option>Sosyoloji</option>
+                <option>Fantastik</option>
+                <option>Biyografi</option>
+                <option>Siyaset</option>
+                <option>Bilim-Kurgu</option>
+                <option>Ekonomi</option>
+                <option>Sağlık-Tıp</option>
+                <option>Hukuk</option>
+                <option>Spor</option>
+                <option>Eğitim</option>
+                <option>Kültür</option>
+            </select>
+          </div>
+          </select>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Kitapta Dikkatinizi Çeken Sözler</label>
+            <input type="textbox" class="form-control" id="bookWord" placeholder="Dikkatinizi Çeken Sözler"
+                maxlength="300">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Kitap Hakkında Yorumlarınız</label>
+            <input type="textbox" class="form-control" id="bookThink" placeholder="Kitap Hakkında Yorumlarınız"
+                maxlength="750">
+        </div> 
+        <div class="container" style="margin-left:15px; margin-top:-20px;">
+            <div class="row">
+                <h2>Kitabı beğendiniz mi?</h2>
+            </div>
+            <div class="row lead">
+                <div id="stars" class="starrr"></div>
+                Bu kitaba
+                <span id="count">0</span> yıldız verdiniz.        
+            </div>
+        <button onclick="add()" type="button" class="btn btn-primary">Ekle</button>
+    </div>
+    </form>
+    <div class="achievement-pane" style="margin-top:-120px;">
+            <div class="icon"></div>
+            <div style="font-family: 'Montserrat', sans-serif;" class="text">
+              <span class="unlocked">Tebrikler! Bir Başarım Kazandınız.</span>
+              <span class="unlocked name">Kitap Eklediğin İçin<span class="unlocked tk">+10 Puan</span></span>
+            </div>
+          </div>      
+    </div>
+</body>
+</html>
